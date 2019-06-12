@@ -45,7 +45,7 @@ public class TaskDBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values= new ContentValues();
         values.put(KEY_ID,task.id);
-        values.put(KEY_TITLE,task.tittle);
+        values.put(KEY_TITLE,task.title);
         values.put(KEY_DESCRIPTION,task.description);
         db.insert(TABLE_NAME,null,values);
         db.close();
@@ -55,7 +55,7 @@ public class TaskDBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values= new ContentValues();
         values.put(KEY_ID,task.id);
-        values.put(KEY_TITLE,task.tittle);
+        values.put(KEY_TITLE,task.title);
         values.put(KEY_DESCRIPTION,task.description);
         int i = db.update(TABLE_NAME,values,KEY_ID+" = ?",new String[] {String.valueOf(task.id)});
         db.close();

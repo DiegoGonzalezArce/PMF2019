@@ -2,7 +2,7 @@ package com.example.pmf2019;
 
 public class Task {
     int id;
-    String tittle;
+    String title;
     String description;
 
     public Task(int id) {
@@ -11,12 +11,17 @@ public class Task {
 
     public Task(int id, String tittle) {
         this.id = id;
-        this.tittle = tittle;
+        this.title = tittle;
+    }
+
+    public Task(String tittle, String description) {
+        this.title = tittle;
+        this.description = description;
     }
 
     public Task(int id, String tittle, String description) {
         this.id = id;
-        this.tittle = tittle;
+        this.title = tittle;
         this.description = description;
     }
 
@@ -29,11 +34,11 @@ public class Task {
     }
 
     public String getTittle() {
-        return tittle;
+        return title;
     }
 
     public void setTittle(String tittle) {
-        this.tittle = tittle;
+        this.title = tittle;
     }
 
     public String getDescription() {
